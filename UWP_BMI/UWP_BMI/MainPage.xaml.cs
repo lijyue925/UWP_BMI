@@ -26,5 +26,18 @@ namespace UWP_BMI
         {
             this.InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            double height = Convert.ToDouble(H.Text);
+            double weight = Convert.ToDouble(W.Text);
+            double ans = weight/Math.Pow(height, 2);
+            if (ans > 24)
+            {
+                
+            }
+            A.Text = ans.ToString();
+        }
+
     }
 }
