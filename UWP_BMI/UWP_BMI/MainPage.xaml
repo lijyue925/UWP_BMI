@@ -15,7 +15,15 @@
             <RowDefinition Height="50"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid Grid.Row="0" Background="Beige">
-            <TextBlock Text="BMI計算機" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+            <TextBlock Text="BMI計算機" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5">
+                <TextBlock.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="0.8" ScaleY="0.5"></ScaleTransform>
+                        <SkewTransform AngleX="15" AngleY="5"></SkewTransform>
+                        <RotateTransform Angle="5"></RotateTransform>
+                    </TransformGroup>
+                </TextBlock.RenderTransform>
+            </TextBlock>
         </Grid>
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
@@ -46,11 +54,22 @@
                     </Style>
                 </StackPanel.Resources>
                 <TextBlock Text="結果：" Style="{StaticResource DefaultTextBluockStyle}"></TextBlock>
-                <TextBlock x:Name="A" Text="" ></TextBlock>
+                <TextBlock x:Name="A" Text="">
+                    <TextBlock.RenderTransform>
+                        <TranslateTransform X="100" Y="50"></TranslateTransform>
+                    </TextBlock.RenderTransform>
+                </TextBlock>
             </StackPanel>
         </Grid>
         <Grid Grid.Row="3" Background="Azure">
-            <TextBlock Text="By Listan" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center" ></TextBlock>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="By Listan" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center" RenderTransformOrigin="0.5,0.5">
+                <TextBlock.RenderTransform>
+                    <RotateTransform Angle="-4.5" CenterX="0" CenterY="0"></RotateTransform>
+                </TextBlock.RenderTransform>
+            </TextBlock>
         </Grid>
     </Grid>
 </Page>
