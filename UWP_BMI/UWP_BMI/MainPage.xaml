@@ -28,11 +28,11 @@
                     <RowDefinition Height="*"></RowDefinition>
                 </Grid.RowDefinitions>
                 <StackPanel Orientation="Horizontal" Grid.Row="0">
-                    <TextBlock Text="身高：" FontSize="30" VerticalAlignment="Center" Margin="20"></TextBlock>
+                    <TextBlock Text="身高：" Style="{StaticResource DefaultTextBluockStyle}"></TextBlock>
                     <TextBox x:Name="H" PlaceholderText="請輸入身高" VerticalAlignment="Center" Width="190" FontSize="30" ></TextBox>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Grid.Row="1">
-                    <TextBlock Text="體重：" FontSize="30" VerticalAlignment="Center" Margin="20"></TextBlock>
+                    <TextBlock Text="體重：" Style="{StaticResource DefaultTextBluockStyle}"></TextBlock>
                     <TextBox x:Name="W" PlaceholderText="請輸入體重" VerticalAlignment="Center" Width="190" FontSize="30"></TextBox>
                 </StackPanel>
             </Grid>
@@ -40,8 +40,13 @@
         </Grid>
         <Grid Grid.Row="2">
             <StackPanel Orientation="Horizontal">
-                <TextBlock Text="結果：" FontSize="30" VerticalAlignment="Center" Margin="20"></TextBlock>
-                <TextBlock x:Name="A" Text="" FontSize="30" VerticalAlignment="Center" Margin="20"></TextBlock>
+                <StackPanel.Resources>
+                    <Style TargetType="TextBlock" BasedOn="{StaticResource DefaultTextBluockStyle}">
+                        <Setter Property="Foreground" Value="Red"></Setter>
+                    </Style>
+                </StackPanel.Resources>
+                <TextBlock Text="結果：" Style="{StaticResource DefaultTextBluockStyle}"></TextBlock>
+                <TextBlock x:Name="A" Text="" ></TextBlock>
             </StackPanel>
         </Grid>
         <Grid Grid.Row="3" Background="Azure">

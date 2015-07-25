@@ -4,5 +4,12 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:UWP_BMI"
     RequestedTheme="Light">
-
+    <Application.Resources>
+        <Style TargetType="TextBlock" x:Key="DefaultTextBluockStyle">
+            <Setter Property="FontSize" Value="30"></Setter>
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+            <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+            <Setter Property="Margin" Value="20"></Setter>
+        </Style>
+    </Application.Resources>
 </Application>
